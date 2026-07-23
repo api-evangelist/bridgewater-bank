@@ -1,0 +1,50 @@
+aid: bridgewater-bank
+url: https://raw.githubusercontent.com/api-evangelist/bridgewater-bank/refs/heads/main/apis.yml
+name: Bridgewater Bank
+kind: company
+description: Bridgewater Bank is a Canadian Schedule I chartered bank, a wholly-owned
+  subsidiary of the Alberta Motor Association (AMA), headquartered in Calgary, Alberta
+  and established in 1997. It is a member of the Canada Deposit Insurance Corporation
+  (CDIC) and operates a broker-distributed, deposit-and-lending model rather than a
+  direct-to-consumer retail branch network — residential mortgages, Guaranteed Investment
+  Certificates (GICs), and high-interest savings accounts sold through a select network
+  of trusted mortgage and deposit brokers, with roughly $3.3 billion in mortgages and
+  deposits across approximately 53,000 customer accounts nationwide. Bridgewater Bank
+  exposes NO public first-party developer API or developer portal. Its only dedicated
+  digital surface beyond the corporate site is a partner-gated broker information portal
+  (bwbbrokerinfo.ca). Canada's Consumer-Driven Banking (open-banking) framework is
+  legislated but not yet operational, so any consumer data access from a bank of this
+  size is voluntary and today would be aggregator/screen-scraping based rather than
+  through a documented first-party API. No Interac, Real-Time Rail (RTR), FDX, or
+  consumer-driven-banking API participation is publicly documented by the institution.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Canada
+- Schedule I Bank
+- Mortgages
+- Deposits
+- Brokers
+- Alberta
+- Open Banking
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.bridgewaterbank.ca/
+- type: Portal
+  url: https://bwbbrokerinfo.ca/
+- type: Support
+  url: https://bridgewaterbank.ca/contact/
+- type: PrivacyPolicy
+  url: https://bridgewaterbank.ca/privacy/
+- type: TermsOfService
+  url: https://bridgewaterbank.ca/terms-and-conditions/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/bridgewater-bank
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

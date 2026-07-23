@@ -1,0 +1,92 @@
+aid: bridgewater-bank
+name: Bridgewater Bank
+review:
+  question: Does Bridgewater Bank expose a public first-party developer API, developer portal, or downloadable OpenAPI/Swagger specification?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Bridgewater Bank publishes NO public first-party developer API, no
+    developer portal, and no downloadable OpenAPI/Swagger specification.
+    Probing developer.bridgewaterbank.ca and api.bridgewaterbank.ca returned
+    no host/connection (curl code 000) — neither subdomain resolves to a
+    developer surface. The corporate site (https://www.bridgewaterbank.ca/,
+    HTTP 200) documents only retail/broker products (residential mortgages,
+    GICs, high-interest savings) with no API reference, SDK, or machine
+    interface. The institution's only additional digital surface is a
+    partner-gated broker information portal (bwbbrokerinfo.ca, HTTP 200),
+    which is a login-walled broker resource — not a developer/API portal and
+    not publicly documented. No GitHub organization exists
+    (github.com/bridgewaterbank returned HTTP 404). Because there is no
+    public API, no authentication model (OAuth2/OIDC, API key, or mTLS) is
+    documented and no spec provenance exists to harvest.
+  charter: |
+    Bridgewater Bank is a Canadian Schedule I chartered bank, wholly owned by
+    the Alberta Motor Association (AMA), founded 1997, headquartered in
+    Calgary, Alberta, and a CDIC member. It is broker-distributed rather than
+    a direct-to-consumer branch bank, with ~$3.3B in mortgages and deposits
+    across ~53,000 accounts.
+  openFinancePosture: |
+    Canada has NO operational open-banking mandate. The federal
+    Consumer-Driven Banking framework (Budget 2024 + Fall Economic Statement
+    2024, overseen by the Financial Consumer Agency of Canada / FCAC) is
+    legislated but not yet live, so access is voluntary and fragmented today.
+    Bridgewater Bank publicly documents no participation in Consumer-Driven
+    Banking, no FDX alignment, no Interac data-sharing/verification API, and
+    no Payments Canada Real-Time Rail (RTR) / Lynx / ISO 20022 API surface.
+    For an institution of this size and broker model, any consumer data
+    access would today be aggregator/screen-scraping based (Flinks, Plaid,
+    MX, Salt Edge) rather than through a first-party API. This is an
+    identity-only, honest "no public API" record.
+  developerPortal: false
+  downloadableSpecs: false
+  fdxParticipant: false
+  cdbPosture: none-documented
+  authModel: none-documented
+  aggregatorAccessOnly: true
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented by Bridgewater Bank.
+    - protocol: GraphQL
+      documented: false
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+  probes:
+    - url: https://developer.bridgewaterbank.ca/
+      status: 000
+      note: No host/connection — no developer portal exists.
+    - url: https://api.bridgewaterbank.ca/
+      status: 000
+      note: No host/connection — no API host exists.
+    - url: https://www.bridgewaterbank.ca/
+      status: 200
+      note: Corporate marketing site; retail/broker products only, no API reference.
+    - url: https://bwbbrokerinfo.ca/
+      status: 200
+      note: Partner-gated broker information portal; not a developer/API portal.
+    - url: https://github.com/bridgewaterbank
+      status: 404
+      note: No GitHub organization.
+sources:
+  - url: https://www.bridgewaterbank.ca/
+    type: Website
+    note: Institution identity, charter (Schedule I, AMA-owned, CDIC, est. 1997), products, size (~$3.3B, ~53,000 accounts). No developer/API content.
+  - url: https://bwbbrokerinfo.ca/
+    type: Portal
+    note: Partner-gated broker information portal. Login-walled; no public API documentation.
+  - url: https://bridgewaterbank.ca/legal/
+    type: Legal
+    note: Legal/regulatory disclosures. No API terms.
+actions:
+  apisYmlUpdated: true
+  openapiHarvested: false
+  reason: |
+    No first-party developer API, portal, or downloadable specification
+    exists to harvest. The record is identity-only (built-stub): a Schedule I
+    Canadian bank with no public API, whose consumer data access today would
+    be aggregator-based under Canada's not-yet-operational Consumer-Driven
+    Banking framework.
