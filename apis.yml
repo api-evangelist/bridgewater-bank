@@ -19,6 +19,16 @@ description: Bridgewater Bank is a Canadian Schedule I chartered bank, a wholly-
   consumer-driven-banking API participation is publicly documented by the institution.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Canada
+- Schedule I Bank
+- Mortgages
+- Deposits
+- Brokers
+- Alberta
+- Open Banking
+tags_raw:
 - Financial Services
 - Banking
 - Canada
