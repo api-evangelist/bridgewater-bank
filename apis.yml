@@ -17,6 +17,17 @@ description: Bridgewater Bank is a Canadian Schedule I chartered bank, a wholly-
   size is voluntary and today would be aggregator/screen-scraping based rather than
   through a documented first-party API. No Interac, Real-Time Rail (RTR), FDX, or
   consumer-driven-banking API participation is publicly documented by the institution.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial-Services
